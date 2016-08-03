@@ -78,9 +78,14 @@
     <Compile Include="BackendTests\RepositoriesTests\CsvPersonRepositoryTests.cs" />
     <Compile Include="BackendTests\RepositoriesTests\SqlPersonRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\PersonComparator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
+    <Content Include="TestFiles\People.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RepositoryPatternIntroduction\RepositoryPatternIntroduction.Backend.csproj">

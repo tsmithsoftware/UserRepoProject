@@ -7,11 +7,6 @@ namespace RepositoryPatternIntroduction.Backend.Repositories
 {
     public class SqlPersonRepository : IRepository<Person>
     {
-        public void Attach(Person entity)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool Delete(Person entity)
         {
             throw new NotImplementedException();
