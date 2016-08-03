@@ -102,11 +102,21 @@ namespace RepositoryPatternIntroduction.Backend.Repositories
 
         public bool Insert(Person entity)
         {
-            if (File.Exists(_filePath))
+            try
             {
-
+                if (File.Exists(_filePath))
+                {
+                    using (StreamWriter writer = new StreamWriter(_filePath,true))
+                    {
+                        writer.WriteLine(entity.Name + "," + entity.Age);
+                    }
+                }
+                return true;
             }
-            throw new NotImplementedException();
+            catch (Exception)
+            {
+                return false;
+            }
         }
         
     }
