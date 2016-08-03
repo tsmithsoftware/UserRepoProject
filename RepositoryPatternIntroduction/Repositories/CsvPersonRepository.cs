@@ -12,7 +12,7 @@ namespace RepositoryPatternIntroduction.Backend.Repositories
             throw new NotImplementedException();
         }
 
-        public void Delete(Person entity)
+        public bool Delete(Person entity)
         {
             throw new NotImplementedException();
         }
@@ -27,14 +27,10 @@ namespace RepositoryPatternIntroduction.Backend.Repositories
             throw new NotImplementedException();
         }
 
-        public void Insert(Person entity)
+        public bool Insert(Person entity)
         {
             throw new NotImplementedException();
         }
-
-        public void SubmitChanges()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

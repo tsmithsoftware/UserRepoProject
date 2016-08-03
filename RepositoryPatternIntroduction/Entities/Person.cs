@@ -1,6 +1,8 @@
-﻿namespace RepositoryPatternIntroduction.Backend.Entities
+﻿using RepositoryPatternIntroduction.Backend.Interfaces;
+
+namespace RepositoryPatternIntroduction.Backend.Entities
 {
-    public class Person
+    public class Person:IPerson
     {
         public string Name { get; set; }
     }
