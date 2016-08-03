@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RepositoryPatternIntroduction
+namespace RepositoryPatternIntroduction.Tests.BackendTests.RepositoriesTests
 {
-    class Program
+    public class CsvPersonRepositoryTests
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
