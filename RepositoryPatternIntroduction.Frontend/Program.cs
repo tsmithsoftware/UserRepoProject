@@ -8,11 +8,11 @@ namespace RepositoryPatternIntroduction.Frontend
     {
         static void Main(string[] args)
         {
-            IRepository<Person> repo;
+            /**IRepository<Person> repo;
             foreach (var person in repo.GetAll())
             {
                 Console.Out.WriteLine(person.ToString());
-            }
+            }**/
         }
     }
 }
