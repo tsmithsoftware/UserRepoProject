@@ -7,6 +7,7 @@ namespace RepositoryPatternIntroduction.Tests.BackendTests.RepositoriesTests
         [Test]
         public void TestGetPersonReturnsCorrectPerson()
         {
+            Assert.Fail("How to test EF6?");
         }
     }
 }

@@ -9,5 +9,7 @@ namespace RepositoryPatternIntroduction.Backend.Interfaces
         IQueryable<T> GetAll();
         bool Insert(T entity);
         bool Delete(T entity);
+        void Save();
+        void Dispose();
     }
 }

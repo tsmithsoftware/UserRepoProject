@@ -52,6 +52,16 @@ namespace RepositoryPatternIntroduction.Backend.Repositories
 
         }
 
+        public void Save()
+        {
+            //placeholder
+        }
+
+        public void Dispose()
+        {
+            //placeholder
+        }
+
         public Person Get(object id)
         {
             Person returnedPerson = null;

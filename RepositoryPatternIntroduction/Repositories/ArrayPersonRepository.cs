@@ -80,5 +80,15 @@ namespace RepositoryPatternIntroduction.Backend.Repositories
             }
             return true;
         }
+
+        public void Save()
+        {
+            //placeholder
+        }
+
+        public void Dispose()
+        {
+            people = null;
+        }
     }
 }
