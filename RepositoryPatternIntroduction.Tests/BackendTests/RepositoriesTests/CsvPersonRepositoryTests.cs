@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using RepositoryPatternIntroduction.Backend.Entities;
+using RepositoryPatternIntroduction.Backend.Interfaces;
 using RepositoryPatternIntroduction.Backend.Repositories;
 using RepositoryPatternIntroduction.Tests.Utilities;
 
@@ -15,7 +16,7 @@ namespace RepositoryPatternIntroduction.Tests.BackendTests.RepositoriesTests
         public void TestGetPersonReturnsCorrectPerson()
         {
             CsvPersonRepository repo = new CsvPersonRepository();
-            Person barry = repo.Get("Barry");
+            IPerson barry = repo.Get("Barry");
             try
             {
                 Assert.IsTrue(barry.Name == "Barry");
@@ -32,8 +33,8 @@ namespace RepositoryPatternIntroduction.Tests.BackendTests.RepositoriesTests
         {
             bool testPasses = true;
             CsvPersonRepository repo = new CsvPersonRepository();
-            IQueryable<Person> repoPeople = repo.GetAll();
-            foreach (Person person in GetExpectedCollection())
+            IQueryable<IPerson> repoPeople = repo.GetAll();
+            foreach (IPerson person in GetExpectedCollection())
             {
                 if (!repoPeople.Contains(person,new PersonComparator())) testPasses = false;
             }
@@ -45,7 +46,7 @@ namespace RepositoryPatternIntroduction.Tests.BackendTests.RepositoriesTests
         public void TestDeleteRemovesPassedPerson()
         {
             CsvPersonRepository repo = new CsvPersonRepository();
-            Person barry = repo.Get("Barry");
+            IPerson barry = repo.Get("Barry");
             bool barryExistsPrior = repo.Get("Barry") != null;
             repo.Delete(repo.Get("Barry"));
             bool barryExistsAfter = repo.Get("Barry") != null;

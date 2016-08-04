@@ -8,7 +8,7 @@ using System.IO;
 
 namespace RepositoryPatternIntroduction.Backend.Repositories
 {
-    public class CsvPersonRepository : IRepository<Person>
+    public class CsvPersonRepository : IRepository<IPerson>
     {
         private string _filePath;
         public CsvPersonRepository()
@@ -17,7 +17,7 @@ namespace RepositoryPatternIntroduction.Backend.Repositories
             _filePath = AppDomain.CurrentDomain.BaseDirectory + "\\TestFiles\\" + fileName;
         }
 
-        public bool Delete(Person entity)
+        public bool Delete(IPerson entity)
         {
             try
             {
@@ -62,7 +62,7 @@ namespace RepositoryPatternIntroduction.Backend.Repositories
             //placeholder
         }
 
-        public Person Get(object id)
+        public IPerson Get(object id)
         {
             Person returnedPerson = null;
 
@@ -88,7 +88,7 @@ namespace RepositoryPatternIntroduction.Backend.Repositories
             return returnedPerson;
         }
 
-        public IQueryable<Person> GetAll()
+        public IQueryable<IPerson> GetAll()
         {
             List<Person> peopleList = new List<Person>();
             if (File.Exists(_filePath))
@@ -110,7 +110,7 @@ namespace RepositoryPatternIntroduction.Backend.Repositories
             return peopleList.AsQueryable();
         }
 
-        public bool Insert(Person entity)
+        public bool Insert(IPerson entity)
         {
             try
             {

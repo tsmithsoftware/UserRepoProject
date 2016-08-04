@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using RepositoryPatternIntroduction.Backend.Entities;
+using RepositoryPatternIntroduction.Backend.Interfaces;
 
 namespace RepositoryPatternIntroduction.Tests.Utilities
 {
-    public class PersonComparator : EqualityComparer<Person>
+    public class PersonComparator : EqualityComparer<IPerson>
     {
-        public override bool Equals(Person firstPerson, Person secondPerson)
+        public override bool Equals(IPerson firstPerson, IPerson secondPerson)
         {
             if (firstPerson == null && secondPerson == null)
                 return true;
@@ -18,7 +19,7 @@ namespace RepositoryPatternIntroduction.Tests.Utilities
                    && firstPerson.Age.Equals(secondPerson.Age);
         }
 
-        public override int GetHashCode(Person obj)
+        public override int GetHashCode(IPerson obj)
         {
             return base.GetHashCode();
         }
