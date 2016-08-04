@@ -78,7 +78,8 @@
     <Compile Include="BackendTests\RepositoriesTests\CsvPersonRepositoryTests.cs" />
     <Compile Include="BackendTests\RepositoriesTests\SqlPersonRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\PersonComparator.cs" />
+    <Compile Include="TestUtilities\PersonComparator.cs" />
+    <Compile Include="Utilities\CommandParserTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -88,6 +89,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RepositoryPatternIntroduction.Frontend\RepositoryPatternIntroduction.Frontend.csproj">
+      <Project>{5BAF78EB-D710-4339-8DAE-9C4BF41E608D}</Project>
+      <Name>RepositoryPatternIntroduction.Frontend</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RepositoryPatternIntroduction\RepositoryPatternIntroduction.Backend.csproj">
       <Project>{222714ae-6e08-4380-86a4-f2b17a0dcf4c}</Project>
       <Name>RepositoryPatternIntroduction.Backend</Name>
